@@ -1,0 +1,170 @@
+@font-face {
+  font-family: robotoMono;
+  src: url(../assets/font/RobotoMono-VariableFont_wght.ttf);
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #000;
+  font-family: robotoMono;
+  color: #f0f0f0;
+  width: 100%;
+}
+
+section .cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+section .cta button {
+  background-color: transparent;
+  font-size: 1.5rem;
+  color: #11ff00;
+  border: none;
+  margin-right: 0.5rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+section .cta img {
+  width: 1.5rem;
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+section .cta:hover img {
+  -webkit-transform: rotate(-0.25turn);
+          transform: rotate(-0.25turn);
+}
+
+.appbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 2rem;
+}
+
+.appbar .logo {
+  font-size: 2rem;
+  font-weight: 900;
+  position: relative;
+  cursor: pointer;
+}
+
+.appbar .logo span {
+  position: absolute;
+  -webkit-transition: opacity 200ms ease-out, -webkit-transform 200ms ease-out;
+  transition: opacity 200ms ease-out, -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out, opacity 200ms ease-out;
+  transition: transform 200ms ease-out, opacity 200ms ease-out, -webkit-transform 200ms ease-out;
+}
+
+.appbar .logo .hover {
+  color: #11ff00;
+  -webkit-transform: translateY(-2rem);
+          transform: translateY(-2rem);
+  opacity: 0;
+}
+
+.appbar .logo:hover .hover {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+.appbar .logo:hover .rest {
+  -webkit-transform: translateY(2rem);
+          transform: translateY(2rem);
+  opacity: 0;
+}
+
+.appbar .links {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.appbar .links .link {
+  margin-right: 1.5rem;
+  cursor: pointer;
+}
+
+.jumbotron {
+  margin: 2rem 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jumbotron .heading {
+  font-size: 2rem;
+  max-width: 500px;
+  font-weight: 900;
+}
+
+.jumbotron .heading span {
+  color: #6c63ff;
+}
+
+.jumbotron .subtext {
+  margin: 3rem 0;
+  font-size: 1.5rem;
+  max-width: 500px;
+  font-weight: 300;
+}
+
+.jumbotron img {
+  width: 50%;
+}
+/*# sourceMappingURL=style.css.map */

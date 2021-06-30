@@ -1,0 +1,127 @@
+@font-face {
+    font-family: robotoMono;
+    src: url(../assets/font/RobotoMono-VariableFont_wght.ttf);
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+    font-family: robotoMono;
+    color: #f0f0f0;
+    width: 100%;
+}
+
+section .cta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+    button {
+        background-color: transparent;
+        font-size: 1.5rem;
+        color: #11ff00;
+        border: none;
+        margin-right: 0.5rem;
+        font-weight: 900;
+        cursor: pointer;
+    }
+    img {
+        width: 1.5rem;
+        transition: transform 200ms ease-out;
+    }
+    &:hover img {
+        transform: rotate(-0.25turn);
+    }
+}
+
+.appbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+    .logo {
+        font-size: 2rem;
+        font-weight: 900;
+        position: relative;
+        cursor: pointer;
+        span {
+            position: absolute;
+            transition: transform 200ms ease-out, opacity 200ms ease-out;
+        }
+        .hover {
+            color: #11ff00;
+            transform: translateY(-2rem);
+            opacity: 0;
+        }
+        &:hover .hover {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        &:hover .rest {
+            transform: translateY(2rem);
+            opacity: 0;
+        }
+    }
+    .links {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        .link {
+            margin-right: 1.5rem;
+            cursor: pointer;
+        }
+    }
+}
+
+.jumbotron {
+    margin: 2rem 3rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .heading {
+        font-size: 2rem;
+        max-width: 500px;
+        font-weight: 900;
+        span {
+            color: #6c63ff;
+        }
+    }
+    .subtext {
+        margin: 3rem 0;
+        font-size: 1.5rem;
+        max-width: 500px;
+        font-weight: 300;
+    }
+
+    img {
+        width: 50%;
+    }
+}
+
+.alt {
+    .title {
+    }
+    .heading {
+    }
+    p {
+    }
+}
