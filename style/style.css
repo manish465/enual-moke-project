@@ -29,6 +29,14 @@ body {
   width: 100%;
 }
 
+body main {
+  width: 100%;
+}
+
+body main a {
+  color: #11ff00;
+}
+
 section .cta {
   display: -webkit-box;
   display: -ms-flexbox;

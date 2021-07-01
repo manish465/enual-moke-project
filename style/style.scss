@@ -26,6 +26,12 @@ body {
     font-family: robotoMono;
     color: #f0f0f0;
     width: 100%;
+    main {
+        width: 100%;
+        a {
+            color: #11ff00;
+        }
+    }
 }
 
 section .cta {
