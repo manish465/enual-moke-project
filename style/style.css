@@ -50,7 +50,24 @@ section .cta button {
   border: none;
   margin-right: 0.5rem;
   font-weight: 900;
+  padding-bottom: 0.5;
   cursor: pointer;
+  position: relative;
+}
+
+section .cta button::after {
+  content: " ";
+  border-bottom: 2px solid;
+  position: absolute;
+  width: 10%;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: width 200ms ease-out;
+  transition: width 200ms ease-out;
+}
+
+section .cta button:hover::after {
+  width: 100%;
 }
 
 section .cta img {
@@ -67,6 +84,7 @@ section .cta:hover img {
 }
 
 .appbar {
+  margin: 1.5rem 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,7 +95,7 @@ section .cta:hover img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 2rem;
+  padding: 0 2rem;
 }
 
 .appbar .logo {
@@ -89,10 +107,10 @@ section .cta:hover img {
 
 .appbar .logo span {
   position: absolute;
-  -webkit-transition: opacity 200ms ease-out, -webkit-transform 200ms ease-out;
-  transition: opacity 200ms ease-out, -webkit-transform 200ms ease-out;
-  transition: transform 200ms ease-out, opacity 200ms ease-out;
-  transition: transform 200ms ease-out, opacity 200ms ease-out, -webkit-transform 200ms ease-out;
+  -webkit-transition: opacity 250ms ease-out, -webkit-transform 200ms ease-out;
+  transition: opacity 250ms ease-out, -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out, opacity 250ms ease-out;
+  transition: transform 200ms ease-out, opacity 250ms ease-out, -webkit-transform 200ms ease-out;
 }
 
 .appbar .logo .hover {
@@ -128,10 +146,28 @@ section .cta:hover img {
 .appbar .links .link {
   margin-right: 1.5rem;
   cursor: pointer;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.appbar .links .link::after {
+  content: " ";
+  border-bottom: 2px solid #f0f0f0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: width 200ms ease-out;
+  transition: width 200ms ease-out;
+}
+
+.appbar .links .link:hover::after {
+  width: 0;
 }
 
 .jumbotron {
-  margin: 2rem 3rem;
+  margin: 0 3rem;
+  margin-top: 5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,7 +194,7 @@ section .cta:hover img {
 }
 
 .jumbotron .subtext {
-  margin: 3rem 0;
+  margin: 1rem 0;
   font-size: 1.5rem;
   max-width: 500px;
   font-weight: 300;
@@ -166,5 +202,193 @@ section .cta:hover img {
 
 .jumbotron img {
   width: 50%;
+}
+
+.alt {
+  margin: 0 3rem;
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.alt .title {
+  font-size: 1.5rem;
+  color: #ff7700;
+}
+
+.alt .heading {
+  margin: 1rem 0;
+  max-width: 700px;
+}
+
+.alt p {
+  margin: 1rem 0;
+  max-width: 700px;
+}
+
+.alt .img {
+  margin-top: 2rem;
+  width: 70%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.alt .cta:hover img {
+  -webkit-transform: rotate(0.25turn);
+          transform: rotate(0.25turn);
+}
+
+.openion {
+  margin: 0 7rem;
+  margin-top: 7rem;
+  padding: 4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.openion::before {
+  content: " ";
+  border-bottom: 2px solid #f0f0f0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -webkit-transform: scaleX(50%);
+          transform: scaleX(50%);
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
+.openion::after {
+  content: " ";
+  border-bottom: 2px solid #f0f0f0;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  -webkit-transform: scaleX(50%);
+          transform: scaleX(50%);
+  -webkit-transition: -webkit-transform 200ms ease-out;
+  transition: -webkit-transform 200ms ease-out;
+  transition: transform 200ms ease-out;
+  transition: transform 200ms ease-out, -webkit-transform 200ms ease-out;
+  -webkit-transform-origin: right;
+          transform-origin: right;
+}
+
+.openion:hover::before {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.openion:hover::after {
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+}
+
+.openion p {
+  max-width: 500px;
+  position: relative;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.openion p:before {
+  content: '"';
+  color: #ff7700;
+}
+
+.openion p::after {
+  content: '"';
+  color: #ff7700;
+}
+
+.openion .profile {
+  width: 10%;
+}
+
+.openion .name {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.openion .from {
+  margin-top: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.openion .from span {
+  color: #6c63ff;
+}
+
+.primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 0 3rem;
+  margin-top: 5rem;
+}
+
+.primary .img {
+  width: 70%;
+  padding: 0 4rem;
+}
+
+.primary .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.primary .info .title {
+  color: #ff7700;
+}
+
+.primary .info .heading {
+  max-width: 500px;
+  margin: 3rem 0;
+}
+
+.primary .info p {
+  max-width: 500px;
+  margin: 1rem 0;
+}
+
+.primary .info .cta:hover img {
+  -webkit-transform: rotate(0.25turn);
+          transform: rotate(0.25turn);
 }
 /*# sourceMappingURL=style.css.map */
